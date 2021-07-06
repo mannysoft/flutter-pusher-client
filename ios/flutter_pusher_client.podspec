@@ -22,7 +22,7 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.dependency 'PusherSwift', pusherLibraryVersion
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '12.0'
 
 s.prepare_command = <<-CMD
     echo // Generated file, do not edit > Classes/UserAgent.h
