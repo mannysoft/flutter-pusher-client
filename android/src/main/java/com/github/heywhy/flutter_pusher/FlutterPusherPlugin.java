@@ -10,7 +10,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * FlutterPusherPlugin
  */
-public class FlutterPusherPlugin implements MethodCallHandler {
+public class FlutterPusherPlugin implements MethodCallHandler, FlutterPlugin {
 
     public static String TAG = "FlutterPusherPlugin";
     public static EventChannel.EventSink eventSink;
@@ -65,5 +65,15 @@ public class FlutterPusherPlugin implements MethodCallHandler {
             pusherInstanceMap.put(instanceId, new PusherInstance(instanceId));
         }
         return pusherInstanceMap.get(instanceId);
+    }
+    
+    @Override
+    public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+        
+    }
+
+    @Override
+    public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+        
     }
 }
