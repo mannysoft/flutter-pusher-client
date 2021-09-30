@@ -68,12 +68,12 @@ public class FlutterPusherPlugin implements MethodCallHandler, FlutterPlugin {
     }
     
     @Override
-    public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+    public void onAttachedToEngine(FlutterPluginBinding binding) {
         
     }
 
     @Override
-    public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    public void onDetachedFromEngine(FlutterPluginBinding binding) {
         
     }
 }
