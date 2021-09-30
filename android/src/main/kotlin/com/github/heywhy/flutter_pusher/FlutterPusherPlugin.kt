@@ -5,8 +5,9 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 
-class FlutterPusherPlugin: MethodCallHandler {
+class FlutterPusherPlugin: MethodCallHandler, FlutterPlugin {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
@@ -21,5 +22,13 @@ class FlutterPusherPlugin: MethodCallHandler {
     } else {
       result.notImplemented()
     }
+  }
+  
+  override fun onAttachedToEngine(binding: FlutterPluginBinding) {
+        
+  }
+
+  override fun onDetachedFromEngine(binding: FlutterPluginBinding) {
+
   }
 }
